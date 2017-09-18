@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "DV Golden"
-baseurl = "dvgolden.github.io"
+baseurl = "dvGolden.github.io"
 theme = "minimal"
 MedaDataFormat = "toml"
 
