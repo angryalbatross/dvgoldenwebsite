@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }}</title>
+
+        <style>
+
+            html body {
+                font-family: {{ .Site.Params.font }}, sans-serif;
+                background-color: {{ .Site.Params.backgroundColor | default "white" }};
+            }
+
+            :root {
+                --accent: {{ .Site.Params.accent | default "#2196F3" }};
+                --border-width: {{ if .Site.Params.showBorder | default false }} 5px {{ else }} 0 {{ end }};
+            }
+
+        </style>
+
+        <!-- jquery -->
+        <script src="\js\jquery-3.2.1.min.js"></script>
+
+        <!-- Borrowed css from minimal theme -->
+        <link rel="stylesheet" href="\css\main.css">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="\css\bootstrap.min.css">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="\css\bootstrap-theme.min.css">
+
+        <!-- font awesome -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+        <!-- bootstrap -->
+        <script src="\js\bootstrap.min.js" ></script>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+                  <!-- <img style="max-height:6em; max-width:12em;" src="\dcGoldenLogo2.png" > -->
+
+                    {{ if .Site.Menus.main }}
+                        <ul class="nav navbar-nav">
+                            {{ range sort .Site.Menus.main }}
+                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+
+                </div>
+
+            </div>
+
+        </nav>

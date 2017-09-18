@@ -2,20 +2,7 @@
 # See https://github.com/spf13/hugoThemes#themetoml for an example
 
 name = "BcBasic"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
+author = "Dan Burgett"
+description = "A basic theme for bugett consulting clients"
+homepage = "https://burgettconsulting.com/"
 min_version = 0.18
-
-[author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
