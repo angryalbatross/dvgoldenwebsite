@@ -34,3 +34,23 @@ MedaDataFormat = "toml"
     name = "Insurance"
     url = "/insurance/"
     weight = 4
+
+#contact setion
+[params.contact]
+    buttonText = "Send message"
+# 'warning' defines error messages for invalid inputs
+[params.contact.form.name]
+  text = "Your Name *"
+  warning = "Please enter your name."
+
+[params.contact.form.email]
+  text = "Your Email *"
+  warning = "Please enter your email address."
+
+[params.contact.form.phone]
+  text = "Your Phone *"
+  warning = "Please enter your phone number."
+
+[params.contact.form.message]
+  text = "Your Message *"
+  warning = "Please enter a message."

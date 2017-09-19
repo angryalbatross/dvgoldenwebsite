@@ -10,24 +10,84 @@
       </div>
 
       <div class="container" style="padding:0;" >
-        <div class="row" style="margin-left:0; margin-right:0;" >
-          <div class="col-sm-6 text-center">
+        <div class="row" style="margin-left:0; margin-right:0; margin-bottom:3em;" >
+          <div class="col-sm-12">
+            <h2 style="margin-top:2em;">About Us</h2>
+          </div>
+          <div class="col-sm-6">
             <p style="margin:5em 1em;">{{ markdownify .Site.Params.frontpageDescription }}</p>
           </div>
           <div class="col-sm-6" style="height:25em;">
-            <img style="margin:5em auto;" src="\flag.png" class="img-responsive" alt="kenyan flag" >
+            <img style="margin:5em auto;" src="\ustoamap.jpg" class="img-responsive" alt="kenyan flag" >
           </div>
         </div>
         <div class="row" style="margin-left:0; margin-right:0;">
           <div class="col-sm-12" style="background-color:red; height:0.5em;">
           </div>
         </div>
-        <div class="row" style="margin-left:0; margin-right:0;">
-          <div class="col-sm-6">
-              <img style="margin:5em auto; height:25em;" src="\Stock Images\StockSnap_27D9PQ26RJ.jpg" class="img-responsive" alt="container ship" >
-          </div>
-          <div class="col-sm-6" >
-            <p style="margin:5em auto;">{{ markdownify .Site.Params.frontpageElaboration }}</p>
+        <div class="row">
+          <div class="col-lg-12" >
+            <h2 style="margin-top:2em;">Contact Us</h2>
+            <p style="margin:2em auto;">If you wish to inquire further about our services, please use the form below.</p>
+            <form style="margin:5em 2em;"  action="//formspree.io/daniel.burgett@gmail.com" method="POST" name="sentMessage" id="contactForm">
+
+              <fieldset>
+                <div class="row row-eq-height">
+                  <div class="col-md-6">
+                    <!-- gotcha included to prevent spam -->
+                    <input type="text" name="_gotcha" style="display:none" />
+                    {{ with .Site.Params.contact.form.name }}
+                    <div class="form-group">
+                      <input class="form-control" id="name" required type="text" name="name" placeholder="{{ with .text }}{{ .  | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Site.Params.contact.form.email }}
+                    <div class="form-group">
+                      <input class="form-control" id="email" required type="email" name="email" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Site.Params.contact.form.phone }}
+                    <div class="form-group">
+                      <input class="form-control" id="phone" required type="number" name="phone" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    {{ end }}
+                  </div>
+
+                  <div class="col-md-6">
+                  {{ with .Site.Params.contact.form.message }}
+                    <div class="form-group">
+                      <textarea class="form-control" style="min-height: 9em;" id="message" required name="message" placeholder="{{ with .text }}{{ . | markdownify }}{{ end }}" data-validation-error-msg="{{ with .warning }}{{ . | markdownify }}{{ end }}"></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    {{ end }}
+
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-lg-12 text-center">
+                    <div class="text-success" id="success" style="display:none;">
+                      {{ with .Site.Params.contact.thanks }}
+                        {{ . | markdownify }}
+                      {{ else }}
+                        Thank you for contacting us.
+                      {{ end }}
+                    </div>
+                    <div class="text-danger" id="error" style="display:none;">
+                      {{ with .Site.Params.contact.error }}
+                        {{ . | markdownify }}
+                      {{ else }}
+                        Message could not be sent. Please contact us at {{ (or .Site.Params.contact.email .Site.Params.email) }} instead.
+                      {{ end }}
+                    </div><br />
+                    <button type="submit" value="Submit" class="btn btn-xl">{{ with .Site.Params.contact.buttonText }}{{ . }}{{ end }}</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>
