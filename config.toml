@@ -1,12 +1,10 @@
 languageCode = "en-us"
 title = "DV Golden Time Shipping and Insurance"
-baseurl = "dvGolden.github.io"
+baseurl = "https://dvgolden.github.io/"
 theme = "minimal"
 MedaDataFormat = "toml"
 
 [params]
-    frontpageDescription ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet, dolor sed viverra scelerisque, orci velit vulputate leo, quis consectetur lorem quam et lacus. Donec tristique dolor vel egestas gravida. Etiam et iaculis est, eget bibendum ante. Sed imperdiet imperdiet urna, non condimentum urna dapibus vel. Suspendisse potenti. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec efficitur, purus eu mollis mollis, turpis nibh imperdiet dui, quis malesuada velit urna ac velit. In et volutpat lectus. Proin ut rhoncus nunc, quis iaculis magna. Nullam quis mi blandit, laoreet libero sed, sollicitudin libero. Maecenas porttitor porta ipsum malesuada vehicula. Ut odio nulla, finibus vel urna eu, cursus laoreet nisl. Phasellus nec leo ac nisi aliquet laoreet at id eros."
-    frontpageElaboration ="Cras diam elit, cursus vitae consectetur vel, viverra a ligula. Etiam facilisis dignissim luctus. Nam tincidunt lacinia suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae, Suspendisse vel ex eu ante viverra mattis eget non nunc. Quisque ac odio eu arcu lacinia faucibus. Nulla ipsum nisi, eleifend ut malesuada eget, vehicula ut magna."
     accent = "red"
     showBorder = true
     backgroundColor = "white"
