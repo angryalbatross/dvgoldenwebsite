@@ -18,21 +18,6 @@ MedaDataFormat = "toml"
     name = "Home"
     weight = 1
 
-[[menu.main]]
-    name = "Shipping"
-    url = "/shipping/"
-    weight = 2
-
-[[menu.main]]
-    name = "Procurement"
-    url = "/procurement/"
-    weight = 3
-
-[[menu.main]]
-    name = "Insurance"
-    url = "/insurance/"
-    weight = 4
-
 #contact setion
 [params.contact]
     buttonText = "Send message"
